@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NASA Daily Picture</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="mainbg">
+    <!-- Top navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img
+            src="images/icons8-astronaut-100-white.png"
+            width="30"
+            height="30"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- left navigation links -->
+          <ul class="navbar-nav mr-auto">
+            <!-- active navigation link -->
+            <li class="nav-item">
+              <a class="nav-link" href="/"
+                ><div class="homelogo">NASA Daily Picture</div>
+              </a>
+            </li>
+          </ul>
+          <!-- right navigation link -->
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html"
+                >About
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Main body -->
+    <main style="background-color:black;">
+      <div class="container-fluid" style="background-color: #0033CC;">
+        <div class="container">
+          <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="p-2 col-sm bd-highlight mt-4">
+              <div class="about-header">
+                Astronomy - Exploring space and beyond in images
+              </div>
+              <p class="description">
+                We are on a mission to discover and share our knowledge of the
+                unknown.
+              </p>
+              <div style="overflow:hidden">
+                <img
+                  class="rocket"
+                  src="images/icons8-space-shuttle-100.png"
+                  height="50px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-3">
+        <div class="d-flex flex-row bd-highlight mb-3">
+          <div class="p-2 col-sm bd-highlight">
+            <div class="title">About</div>
+            <p class="description">
+              Astronomy Picture of the Day (APOD) is a website provided by NSA
+              and Michigan Technology University (MTU). The website displays a
+              different image or video of our universe along with a summary
+              written by a professional astronomer.
+            </p>
+            <p class="description">
+              The APOD website is one of the most popular websites across all
+              federal agencies. The data used is sourced from the NASA Open API
+              portal whose objective is to make NASA data, including imagery,
+              available to application developers to use in their applications
+              and services.
+            </p>
+            <p class="description">
+              The NASA Daily Picture website uses the APOD API to source the
+              imagery including the title and description. The website allows
+              users to navigate through previous daily pictures published on the
+              APOD website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script to call NASA api -->
+    <script src="dailypicture.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

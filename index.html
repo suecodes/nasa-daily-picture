@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NASA Daily Picture</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="mainbg">
+    <!-- Top navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img
+            src="images/icons8-astronaut-100-white.png"
+            width="30"
+            height="30"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- left navigation links -->
+          <ul class="navbar-nav mr-auto">
+            <!-- active navigation link -->
+            <li class="nav-item active">
+              <a class="nav-link" href="/"
+                ><div class="homelogo">NASA Daily Picture</div>
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+          <!-- right navigation link -->
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Main body -->
+    <main style="background-color:black;">
+      <div class="container-fluid p-0">
+        <div class="row m-0">
+          <!-- Left column i.e. text -->
+          <div class="col-sm-4 mt-3">
+            <a
+              class="caption"
+              data-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Hide Caption
+            </a>
+            <div class="collapse.show" id="collapseExample">
+              <div class="card card-body bg-transparent">
+                <p id="date" class="date"></p>
+                <p id="title" class="title"></p>
+                <p id="description" class="description text-justify"></p>
+                <p id="copyright" class="copyright"></p>
+              </div>
+            </div>
+          </div>
+          <!-- Right column i.e. image -->
+          <div class="col-sm-8">
+            <div class="float-right mt-3 mb-3">
+              <img
+                id="leftarrow"
+                src="images/icons8-left-button-100.png"
+                width="30"
+                height="30"
+                alt=""
+              />
+              <img
+                id="rightarrow"
+                src="images/icons8-right-button-100.png"
+                width="30"
+                height="30"
+                alt=""
+              />
+            </div>
+            <!-- alert for warnings -->
+            <div
+              id="warningAlert"
+              class="alert alert-info alert-dismissible show fade d-none mt-3"
+              role="alert"
+            >
+              <strong>Tomorrow does not exist yet.</strong> Please try again
+              tomorrow for NASA Daily Picture.
+              <button
+                id="closeAlert"
+                type="button"
+                class="close"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- video -->
+            <div
+              id="videoframe"
+              class="embed-responsive embed-responsive-16by9"
+              style="display: none;"
+            >
+              <iframe
+                id="videoUrl"
+                class="embed-responsive-item"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- image -->
+            <img
+              id="imageUrl"
+              class="img-fluid mt-4"
+              alt="NASA Picture of the Day"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container mb-3"></div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script to call NASA api -->
+    <script src="dailypicture.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
