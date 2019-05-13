@@ -1,0 +1,9 @@
+# Ignore JSON file
+.JSON
+
+# Optional eslint cache
+.eslintcache
+
+# DS Store
+.DS_Store
+
