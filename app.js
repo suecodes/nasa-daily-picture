@@ -92,7 +92,12 @@ function getDailyPicture() {
         title.innerHTML = obj.title;
         desc.innerHTML = obj.explanation;
         date.innerHTML = formatUIDate(obj.date);
-        copyright.innerHTML = "Copyright: " + obj.copyright;
+
+        let validCopyRight = "";
+        obj.copyright == null
+          ? (validCopyRight = "Unknown")
+          : (validCopyRight = obj.copyright);
+        copyright.innerHTML = "Copyright: " + validCopyRight;
 
         // check if video or image
         if (obj.media_type === "video") {
